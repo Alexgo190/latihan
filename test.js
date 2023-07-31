@@ -15,12 +15,12 @@ const arr = [1, 2, 3, 5, 6, 8, 7, 9, 10, 10]
 findNumber(arr)
 
 //No.2
-const word = ["i", "like", "playing", "valorant"]
+const word = ["Hey", "Alexander", "Steve"]
 const arrayToStrings = function (arr) {
-  let holder = ""
-  for (let i = 0; i < arr.length; i++) {
-    holder += arr[i] + " "
-  }
+  let addComma = arr.slice(0, 2).join(", ")
+  let addAnd = arr.slice(1, 3).join(" and ")
+  let mixCommaAnd = addAnd.slice(9)
+  let holder = addComma + mixCommaAnd
   console.log(holder)
 }
 arrayToStrings(word)
@@ -44,9 +44,8 @@ console.log(stringsToArray(strings))
 
 //No.4
 const calcArray = function (arr1, arr2) {
-  var sum = arr1.map((arr1, index) => arr1 + arr2[index])
-
-  return sum
+  const newArr = arr1.map((arr1, index) => arr1 + arr2[index])
+  return newArr
 }
 const array1 = [1, 2, 3]
 const array2 = [3, 2, 1]
@@ -54,13 +53,26 @@ console.log(calcArray(array1, array2))
 
 //No.5
 const nomor = [1, 2, 3, 4, 5, 6, 7, 9]
-const addElement = function (element) {
-  let nomorBaru = 0
-  for (let i = 0; i < nomor.length; i++) {
-    nomorBaru += element
+const addElement = function (arr, number) {
+  if (arr.includes(number)) {
+    return nomor
+  } else {
+    return [...arr, number]
   }
-  console.log(nomorBaru)
 }
-// const nomorBaru = nomor.push(7)
-// console.log(nomor)
-console.log(addElement(8))
+
+console.log(addElement(nomor, 5))
+
+//No.6
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+const findEvenNumbers = function (arr) {
+  const newNumber = []
+  arr.map((e) => {
+    if (e % 2 === 0) {
+      newNumber.push(e)
+    }
+  })
+  return newNumber
+}
+
+console.log(findEvenNumbers(number))

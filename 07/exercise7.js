@@ -1,4 +1,12 @@
-//No.1
+//NO.1
+const checkingTwoObjects = function (obj1, obj2) {
+  if (JSON.stringify(obj1) === JSON.stringify(obj2)) {
+    console.log("Objects are the same")
+  } else {
+    console.log("Objects are not the same")
+  }
+}
+
 const lion = {
   name: "lion",
 }
@@ -6,21 +14,12 @@ const lion = {
 const tiger = {
   name: "tiger",
 }
-
-const checkingObj = function (obj1, obj2) {
-  if (obj1 === obj2) {
-    return console.log("The object is equal")
-  } else {
-    return console.log("The object is not equal")
-  }
-}
-
-// checkingObj(lion, tiger)
+checkingTwoObjects(lion, tiger)
 
 //No.2
 const intersectingObj = function (obj1, obj2) {
-  var k1 = Object.keys(obj1)
-  return k1.filter((x) => {
+  var object = Object.keys(obj1)
+  return object.filter((x) => {
     return obj2[x] !== undefined
   })
 }
@@ -34,7 +33,6 @@ const object2 = {
   b: "3",
   c: "3",
 }
-
 console.log(intersectingObj(object1, object2))
 
 //No.3
@@ -59,16 +57,16 @@ const studentsData2 = [
   },
 ]
 
-const mergeObject = function (obj1, obj2) {
-  const merge = [...obj1, ...obj2]
-  const keys = new Set()
-
+const mergeObject = function (students1, students2) {
+  const merge = [...students1, ...students2]
+  const set = new Set()
   const result = []
+
   merge.forEach((item) => {
-    const key = item.name
-    if (!keys.has(key)) {
-      keys.add(key)
-      result.push(keys)
+    const name = item.name
+    if (!set.has(name)) {
+      set.add(name)
+      result.push(item)
     }
   })
   return result
@@ -77,39 +75,35 @@ const mergeObject = function (obj1, obj2) {
 console.log(mergeObject(studentsData1, studentsData2))
 
 //No.4
-const swapValues = function (arr) {
+const swapValues = function (object) {
   let result = []
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < object.length; i++) {
     let newObj = {}
-    for (let key in arr[i]) {
-      let value = arr[i][key]
-      newObj[value] = key
+    for (let item in object[i]) {
+      let value = object[i][item]
+      newObj[value] = item
     }
     result.push(newObj)
   }
   return result
 }
 
-const input = [
+const object = [
   {
-    name: "david",
-    age: "20",
-  },
-  {
-    name: "Alex",
-    hobbies: "valorant",
-    age: "12",
+    name: "David",
+    age: "22",
   },
 ]
 
-console.log(swapValues(input))
+console.log(swapValues(object))
 
 //No.5
 const factorial = function (n) {
   if (n === 0) {
     return 1
   }
+
   return n * factorial(n - 1)
 }
 
-console.log(factorial(5))
+console.log(factorial(3))

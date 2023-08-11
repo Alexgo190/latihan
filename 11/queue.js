@@ -21,10 +21,6 @@ class Queue {
       }, time * 1000)
     }
   }
-
-  get getSize() {
-    return this.queue.length
-  }
 }
 
 module.exports = Queue

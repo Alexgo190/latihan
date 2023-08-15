@@ -1,23 +1,14 @@
 //No.1
-function excel(alphabet) {
-  const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  let result = 0
-
-  for (var i = 0; i < alphabet.length; i++) {
-    let findAlphaNumber = 0
-    let temp = 0
-    for (var j = 0; j < alphabet.length; j++) {
-      if (alphabets[j] == alphabet[i]) {
-        findAlphaNumber = j + 1
-        break
-      }
-    }
-
-    temp = findAlphaNumber * Math.pow(26, alphabet.length - i - 1)
-    result += temp
+const excel = function (alphabet) {
+  let sum = 0
+  // ABC => A = 0 * 26 + 1 = 1 , B => 1 * 26 + 2 = 28 , C => 28 * 26 + 3 = 729
+  for (let i = 0; i < alphabet.length; i++) {
+    sum = sum * 26 + (alphabet.charCodeAt(i) - 64)
   }
-  return result
+  return sum
 }
+
+console.log(excel("ABA"))
 
 //No.2
 const findSingle = function (arr) {

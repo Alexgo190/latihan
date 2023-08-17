@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  background-color: rgb(226, 186, 54);
+  border: black;
+  text-align: center;
+}

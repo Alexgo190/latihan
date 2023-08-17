@@ -1,0 +1,20 @@
+.container .image {
+  margin: auto;
+  display: block;
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  background-color: rgb(42, 95, 210);
+  color: white;
+  border: 4px double black;
+  padding: 10px 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

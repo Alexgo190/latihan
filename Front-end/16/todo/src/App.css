@@ -1,0 +1,10 @@
+* {
+  background-color: #1a202d;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

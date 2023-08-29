@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  align-items: center;
+  background-color: black;
+  color: wheat;
+  font-weight: bold;
+}
+
+.navbar a {
+  font-size: 24px;
+}

@@ -1,0 +1,19 @@
+.time {
+  color: black;
+  font-size: 100px;
+}
+
+.button {
+  display: flex;
+  color: aquamarine;
+  font-size: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: aliceblue;
+}

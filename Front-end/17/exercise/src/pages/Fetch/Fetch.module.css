@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 100vh;
+  gap: 20px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.table {
+  border: 1px solid white;
+}

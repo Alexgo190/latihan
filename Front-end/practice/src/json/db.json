@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "Robert",
+      "email": "rob123@gmail.com",
+      "password": "robert123"
+    },
+    {
+      "name": "Emily",
+      "email": "emily34@gmail.com",
+      "password": "emily123"
+    }
+  ],
+  "tweets": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "tweet": "Hi there",
+      "name": "Alex"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "tweet": "Heyyoooo",
+      "name": "Akbar"
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "tweet": "Broooo",
+      "name": "Akmal"
+    },
+    {
+      "tweet": "haiii",
+      "user_id": 1,
+      "name": "Alex",
+      "id": 4
+    },
+    {
+      "tweet": "capek deh",
+      "user_id": 1,
+      "name": "Alex",
+      "id": 5
+    }
+  ]
+}
